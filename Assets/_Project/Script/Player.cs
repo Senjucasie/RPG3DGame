@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class Player : MonoBehaviour
 {
     [SerializeField] private Camera _camera;
-    [SerializeField] private Transform _target;
     private NavMeshAgent _navmeshAgent;
 
     private void Start()
