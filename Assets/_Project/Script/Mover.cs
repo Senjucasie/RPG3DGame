@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Player : MonoBehaviour
+public class Mover : MonoBehaviour
 {
-    [SerializeField] private Camera _camera;
     [SerializeField] private Animator _characterAnimator;
     private NavMeshAgent _navmeshAgent;
 
@@ -19,13 +18,8 @@ public class Player : MonoBehaviour
     }
 
     private void Update()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            MoveOnClick();
-        }
-
-        UpdateAnimator();
+    { 
+       UpdateAnimator();
     }
 
     private void UpdateAnimator()
@@ -35,15 +29,10 @@ public class Player : MonoBehaviour
         _characterAnimator.SetFloat("ForwardSpeed", _localVelocity.z);
     }
 
-    private void MoveOnClick()
+  
+
+    public void MoveToPoint(Vector3 terrainpos)
     {
-        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        bool hashit = Physics.Raycast(ray, out hit);
-
-        if (hashit)
-            _navmeshAgent.destination = hit.point;
-
-
+        _navmeshAgent.destination = terrainpos;
     }
 }
