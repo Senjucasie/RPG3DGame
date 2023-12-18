@@ -12,19 +12,18 @@ namespace RPG.PlayerInput
         // Update is called once per frame
         void Update()
         {
-        if (Input.GetMouseButton(0))
-            CreateRayCast();
+            if (Input.GetMouseButton(0))
+                CreateRayCast();
         }
 
         private void CreateRayCast()
         {
-        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        bool hashit = Physics.Raycast(ray, out hit);
+            Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            bool hashit = Physics.Raycast(ray, out hit);
 
-        if (hashit)
-            _mover.MoveToPoint(hit.point);
-
+            if (hashit)
+                _mover.MoveToPoint(hit.point);
         }
     }
 
