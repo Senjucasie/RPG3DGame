@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace RPG.Movement
+namespace RPG.Core
 {
     public class Mover : MonoBehaviour
     {

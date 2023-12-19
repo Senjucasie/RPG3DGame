@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6441575146155063028}
   - component: {fileID: 6441575146155063029}
   - component: {fileID: 6441575146155063034}
-  - component: {fileID: 6441575146155063035}
+  - component: {fileID: 4664849130203050921}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -73,7 +73,7 @@ NavMeshAgent:
   m_ObstacleAvoidanceType: 4
 --- !u!95 &6441575146155063034
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,8 +90,9 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6441575146155063035
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4664849130203050921
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,11 +101,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3905819694762961722}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eef1e9d31a5991c47ac6e681e4a3acb2, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d13876135d221f418421bca7e22c3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 0}
   _mover: {fileID: 6441575146155063028}
+  _camera: {fileID: 0}
 --- !u!1001 &6441575145649791944
 PrefabInstance:
   m_ObjectHideFlags: 0

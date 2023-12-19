@@ -1,19 +1,24 @@
-
-using RPG.Movement;
+using RPG.Core;
 using UnityEngine;
 
-namespace RPG.PlayerInput
+namespace RPG.Control
 {
-    public class PlayerInputHandler : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private Camera _camera;
         [SerializeField] private Mover _mover;
+        [SerializeField] private Camera _camera;
 
-        // Update is called once per frame
+        void Start()
+        {
+
+        }
+
         void Update()
         {
             if (Input.GetMouseButton(0))
+            {
                 CreateRayCast();
+            }
         }
 
         private void CreateRayCast()
